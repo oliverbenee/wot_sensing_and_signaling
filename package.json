@@ -1,5 +1,5 @@
 {
-  "name": "assignment-2",
+  "name": "web-of-things-assignment-2-oliverbenee",
   "version": "1.0.0",
   "description": "Assignment 2 - Oliver Benée. This particular program is responsible for the administration of four LEDs, that communicate the temperature, humidity and a trigger of a PIR sensor. ",
   "main": "assignment2new.js",
@@ -16,7 +16,7 @@
     ],
     "author": "Oliver Benée <oliver.benee@gmail.com>",
     "scripts": {
-    "start": "assignment2new.js"
+    "start": "../assignment-2/assignment2new.js"
   },
   "engine": "node >= 0.12.0"
 }
