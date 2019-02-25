@@ -7,16 +7,17 @@
     "node-dht-sensor": "^0.0.33",
     "onoff": "^1.2.0"
   },
-  "repository": {
-      "type": "git",
-      "url": "git@gitlab.au.dk:itwot-delta-2019/assignment-2.git"
-  },
-    "keywords": [
-        "assignment2"
-    ],
-    "author": "Oliver Benée <oliver.benee@gmail.com>",
-    "scripts": {
+  "scripts": {
+    "test": "echo \"No test specified.\" && exit 1",
+    "help": "Commands include: 'test', 'help', 'start'.",
     "start": "../assignment-2/assignment2new.js"
   },
-  "engine": "node >= 0.12.0"
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.au.dk:itwot-delta-2019/assignment-2.git"
+  },
+  "keywords": ["assignment-2"],
+  "author": "Oliver Benée <oliver.benee@gmail.com>",
+  "engine": "node >= 0.12.0",
+  "license": "ISC"
 }
