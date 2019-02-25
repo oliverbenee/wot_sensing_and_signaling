@@ -43,6 +43,7 @@ function read () {
     if (value === 1) {
       redblink()
       console.log(value ? 'there is someone!' : 'not anymore!')
+      redLED.writeSync(1)
     }
   })
 }
