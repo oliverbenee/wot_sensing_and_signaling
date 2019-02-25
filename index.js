@@ -35,18 +35,17 @@ function read () {
     greenLED.writeSync(1)
     console.log('Humidity has been registered as above 60.')
   } else {
-    greenLED.writesync(0)
+    greenLED.writeSync(0)
     console.log('Humidity has been registered as below 60.')
   }
+  sensorPir.watch((err, value) => {
+    if (err) exit(err)
+    if (value === 1) {
+      redblink()
+      console.log(value ? 'there is someone!' : 'not anymore!')
+    }
+  })
 }
-
-sensorPir.watch((err, value) => {
-  if (err) exit(err)
-  if (value === 1) {
-    redblink()
-    console.log(value ? 'there is someone!' : 'not anymore!')
-  }
-})
 
 function redblink () {
   let sum = 0
