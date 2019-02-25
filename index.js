@@ -27,7 +27,7 @@ function read () {
       let value = (blueLED.readSync() + 1) % 2 // #D
       console.log('Temperature has been registered as below 15.')
       blueLED.write(value, () => {
-        console.log('LED state changed to: ' + value)
+        console.log('blue LED state changed to: ' + value)
       })
     }
   }
@@ -43,19 +43,18 @@ function read () {
     if (value === 1) {
       redblink()
       console.log(value ? 'there is someone!' : 'not anymore!')
-      redLED.writeSync(1)
     }
   })
 }
 
 function redblink () {
   let sum = 0
-  const interval = setInterval(() => {
+  const newInterval = setInterval(() => {
     let value = (redLED.readSync() + 1) % 2
-    redLED.readSync(value)
+    redLED.read.writeSync(value)
     sum++
     if (sum === 6) {
-      clearInterval(interval)
+      clearInterval(newInterval)
     }
   }, 5000)
 }
