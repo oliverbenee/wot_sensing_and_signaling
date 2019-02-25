@@ -56,7 +56,7 @@ function redblink () {
     if (sum === 6) {
       clearInterval(interval)
     }
-  }, 500)
+  }, 5000)
 }
 
 function exit (err) {
