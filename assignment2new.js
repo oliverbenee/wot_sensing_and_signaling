@@ -5,9 +5,10 @@ const sensorPir = new Gpio(17, 'in', 'both')
 const blueLED = new Gpio(3, 'out') // #B
 const greenLED = new Gpio(5, 'out')
 const yellowLED = new Gpio(11, 'out')
-const redLED = new Gpio(8, 'out')
+const redLED = new Gpio(22, 'out')
 const sensorLib = require('node-dht-sensor')
 sensorLib.initialize(11, 12) // Pin and sensor type.
+sensorLib.initialize(22, 12) // Pin and sensor type
 
 const interval = setInterval(() => { // #C
   read()
@@ -43,6 +44,7 @@ sensorPir.watch((err, value) => {
   if (err) exit(err)
   if (value === 1) {
     redblink()
+    console.log(value ? 'there is someone!' : 'not anymore!')
   }
 })
 
