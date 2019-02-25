@@ -1,12 +1,20 @@
 {
   "name": "assignment-2",
+  "version": "1.0.0",
   "description": "Assignment 2 - Oliver Benée. This particular program is responsible for the administration of four LEDs, that communicate the temperature, humidity and a trigger of a PIR sensor. ",
-  "author": "Oliver Benée <oliver.benee@gmail.com>",
-  "repository": "https://gitlab.au.dk/au617191/assignment-2",
+  "main": "assignment2new.js",
   "dependencies": {
     "node-dht-sensor": "^0.0.33",
     "onoff": "^1.2.0"
   },
+  "repository": {
+      "type": "git",
+      "url": "git@gitlab.au.dk:itwot-delta-2019/assignment-2.git"
+  },
+    "keywords": [
+        "assignment2"
+    ],
+    "author": "Oliver Benée <oliver.benee@gmail.com>",
     "scripts": {
     "start": "assignment2new.js"
   },
